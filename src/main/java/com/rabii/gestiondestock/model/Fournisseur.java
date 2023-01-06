@@ -1,9 +1,7 @@
 package com.rabii.gestiondestock.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import java.util.List;
@@ -27,6 +25,8 @@ public class Fournisseur extends AbstractEntity {
     private String mail;
     @Column(name = "numtel")
     private String numTel;
-    @OneToMany(mappedBy = "founisseur")
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
+    @OneToMany(mappedBy = "fournisseur")
     private List<CommandeFournisseur> commandeFournisseurs;
 }

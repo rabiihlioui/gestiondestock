@@ -1,12 +1,9 @@
 package com.rabii.gestiondestock.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
@@ -15,5 +12,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "roles")
 public class Roles extends AbstractEntity {
-    private String nom;
+    @Column(name = "rolename")
+    private String roleName;
+    @ManyToOne
+    @JoinColumn(name = "idUtilisateur")
+    private Utilisateur utilisateur;
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
 }

@@ -1,9 +1,7 @@
 package com.rabii.gestiondestock.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,6 +20,8 @@ public class Category extends AbstractEntity {
     private String code;
     @Column(name = "designation")
     private String designation;
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
     @OneToMany(mappedBy = "category")
     private List<Article> articles;
 }

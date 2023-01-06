@@ -1,9 +1,7 @@
 package com.rabii.gestiondestock.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import java.time.Instant;
@@ -20,6 +18,8 @@ public class CommandeFournisseur extends AbstractEntity {
     private String code;
     @Column(name = "datecommande")
     private Instant dateCommande;
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
     @ManyToOne
     @JoinColumn(name = "idFournisseur")
     private Fournisseur fournisseur;
