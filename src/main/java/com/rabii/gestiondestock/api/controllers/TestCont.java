@@ -1,4 +1,4 @@
-package com.rabii.gestiondestock.controllers;
+package com.rabii.gestiondestock.api.controllers;
 
 import com.rabii.gestiondestock.model.Article;
 import com.rabii.gestiondestock.repository.GenericRepository;
