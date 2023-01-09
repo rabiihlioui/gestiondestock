@@ -5,10 +5,9 @@ import com.rabii.gestiondestock.model.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.io.Serializable;
 import java.util.Optional;
 
 @Repository
-public interface GenericRepository<E extends AbstractEntity> extends JpaRepository<E, Integer> {
-    //Optional<E> findByCodeArticle(String codeArticle);
+public interface ArticleRepository extends JpaRepository<Article, Integer> {
+    Optional<Article> findByCodeArticle(String codeArticle);
 }

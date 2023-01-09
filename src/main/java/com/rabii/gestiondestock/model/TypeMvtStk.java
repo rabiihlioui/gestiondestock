@@ -1,4 +1,5 @@
 package com.rabii.gestiondestock.model;
 
-public class TypeMvtStk {
+public enum TypeMvtStk {
+    ENTREE, SORTIE, CORRECTION_POS, CORRECTION_NEG
 }

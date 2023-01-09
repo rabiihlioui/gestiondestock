@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class TestCont {
     @Autowired
-    private GenericRepository<Article, Integer> articleRepo;
+    private GenericRepository<Article> articleRepo;
 
     public void testMethod() {
         this.articleRepo.findAll();

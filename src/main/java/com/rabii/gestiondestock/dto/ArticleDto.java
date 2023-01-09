@@ -1,5 +1,6 @@
 package com.rabii.gestiondestock.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rabii.gestiondestock.model.Article;
 import com.rabii.gestiondestock.model.Category;
 import lombok.Builder;
